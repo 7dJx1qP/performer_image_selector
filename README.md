@@ -25,6 +25,10 @@ and you want to select a photo from each performer's folder of images to use as 
 
 The current performer image is shown on top, and the performer images in the performer-named image folder are shown at the bottom. Simply click an image to set it as the performer image.
 
+## Requirements
+
+Python 3.6+
+
 ## Installation
 
 Put `performer_image_selector` into your `plugins` directory
