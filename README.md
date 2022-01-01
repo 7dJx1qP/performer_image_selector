@@ -29,6 +29,8 @@ The current performer image is shown on top, and the performer images in the per
 
 Python 3.6+
 
+*Note: This plugin does not fit the use-case where you access stash from a different computer than the one that runs stash (i.e. you access stash over a network, stash runs on a server or NAS). This plugin works by opening a GUI window and launching a browser on the computer running stash.*
+
 ## Installation
 
 Put `performer_image_selector` into your `plugins` directory
