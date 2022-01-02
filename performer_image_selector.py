@@ -60,7 +60,10 @@ def select_images(db: StashDatabase, outdirs):
                         performers.append(performer)
                     dirmap[performer.name].append(dirpath)
     
-    performers = [performer for performer in performers if performer.id not in tagged_performer_ids and performer.favorite]
+    log.LogTrace(f"FAVORITES_ONLY={FAVORITES_ONLY}")
+    performers = [performer for performer in performers if performer.id not in tagged_performer_ids]
+    if FAVORITES_ONLY:
+        performers = [performer for performer in performers if performer.favorite]
 
     IMGSIZE = (IMAGE_WIDTH, IMAGE_HEIGHT)
     IMAGES_PER_PAGE = IMAGE_COL_COUNT * IMAGE_ROW_COUNT
